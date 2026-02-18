@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar,Toolbar,Box,ToggleButton,ToggleButtonGroup,IconButton,Menu,MenuItem,Typography,Radio,Stack } from '@mui/material';
+import { AppBar, Toolbar, Box, ToggleButton, ToggleButtonGroup, IconButton, Menu, MenuItem, Typography, Radio, Stack } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WallpaperIcon from '@mui/icons-material/Wallpaper';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -21,15 +21,15 @@ const themes = [
 
 const TopBar = ({ onChangeBg }: TopBarProps) => {
 
-  const { i18n } = useTranslation(); 
+  const { i18n, t } = useTranslation();
   const currentLanguage = i18n.language;
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const { setThemeName, themeName } = useThemeContext();
 
   const handleLanguageChange = (_: any, newLang: string) => {
-    if (newLang) i18n.changeLanguage(newLang); 
-    
+    if (newLang) i18n.changeLanguage(newLang);
+
   };
 
   const handleThemeSelect = (themeId: string) => {
@@ -49,9 +49,16 @@ const TopBar = ({ onChangeBg }: TopBarProps) => {
       >
         <Toolbar sx={{ justifyContent: 'space-between' }}>
 
-          <IconButton onClick={() => setDrawerOpen(true)} sx={{ color: 'white' }}>
-            <MenuIcon />
-          </IconButton>
+          <Box sx={{display:'flex', flexDirection:'row', gap:'20px' }}>
+            <IconButton onClick={() => setDrawerOpen(true)} sx={{ color: 'white' }}>
+              <MenuIcon />
+            </IconButton>
+            <Typography sx={{ fontSize:'15px' , alignSelf:'center', color:'#67696b' }}>
+                {t('topbar.selfHosted')}
+            </Typography>
+          </Box>
+
+
 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
 
@@ -93,10 +100,10 @@ const TopBar = ({ onChangeBg }: TopBarProps) => {
             </Menu>
 
           </Box>
-        </Toolbar> 
+        </Toolbar>
       </AppBar>
 
-      <NavigationDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} themeName={themeName}/>
+      <NavigationDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} themeName={themeName} />
     </>
   );
 };

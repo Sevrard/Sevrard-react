@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { Drawer,Box,Typography,List,ListItem,ListItemButton,ListItemIcon,ListItemText,Divider,Collapse } from '@mui/material';
-import { Stack } from '@mui/material';
-
-import CodeIcon from '@mui/icons-material/Code';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TerminalIcon from '@mui/icons-material/Terminal';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import LanguageIcon from '@mui/icons-material/Language';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import PaletteIcon from '@mui/icons-material/Palette';
+import { Drawer, Box, Typography, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Divider, Collapse, Stack } from '@mui/material';
+// Import des icônes Lucide
+import {
+  Rocket,
+  Code2,
+  ChevronDown,
+  ChevronUp,
+  Globe,
+  Github,
+  Gamepad2,
+  Palette
+} from 'lucide-react';
 
 interface Props {
   open: boolean;
@@ -21,8 +21,13 @@ interface Props {
 const NavigationDrawer = ({ open, onClose, themeName }: Props) => {
   const [openAngular, setOpenAngular] = useState(true);
   const [openReact, setOpenReact] = useState(true);
+  const [openProject, setOpenProject] = useState(true);
 
-  const styleSubItem = { pl: 4, '&:hover': { backgroundColor: 'rgba(255,255,255,0.05)' } };
+  // Style commun pour les icônes Lucide avec la couleur accent
+  const iconStyle = { size: 25, color: 'var(--mat-primary)' };
+  const subIconStyle = { size: 19, color: 'var(--mat-accent)' };
+  const styleSubItem = { pl: 4, minWidth: 15, '&:hover': { backgroundColor: 'rgba(255,255,255,0.05)' } };
+  const itemIconSx = { minWidth: '35px', display: 'flex', alignItems: 'center' };
 
   return (
     <Drawer
@@ -41,9 +46,9 @@ const NavigationDrawer = ({ open, onClose, themeName }: Props) => {
       }}
     >
       <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-        
+
         <Box sx={{ p: 3, display: 'flex', alignItems: 'center', gap: 2 }}>
-          <RocketLaunchIcon sx={{ color: '#e91e63' }} />
+          <Rocket size={24} color="var(--mat-accent)" />
           <Typography variant="h6" sx={{ fontWeight: 700, letterSpacing: 1 }}>
             NAVIGATION
           </Typography>
@@ -52,49 +57,78 @@ const NavigationDrawer = ({ open, onClose, themeName }: Props) => {
         <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)' }} />
 
         <List sx={{ flexGrow: 1, pt: 2 }}>
-          
+
+          {/* SECTION ANGULAR */}
           <ListItem disablePadding>
             <ListItemButton onClick={() => setOpenAngular(!openAngular)}>
-              <ListItemIcon><CodeIcon sx={{ color: '#dd0031' }} /></ListItemIcon>
+              <ListItemIcon>
+                <Code2 {...iconStyle} />
+              </ListItemIcon>
               <ListItemText primary="Angular DEMO" primaryTypographyProps={{ fontWeight: 600 }} />
-              {openAngular ? <ExpandLess /> : <ExpandMore />}
+              {openAngular ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </ListItemButton>
           </ListItem>
-          
-          <Collapse in={openAngular} timeout="auto" unmountOnExit>
 
+          <Collapse in={openAngular} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton  sx={styleSubItem} component="a" href="https://demo.fuky.synology.me" target="_blank">
-                <ListItemIcon><LanguageIcon sx={{ fontSize: 20, color: 'rgba(255,255,255,0.7)' }} /></ListItemIcon>
+              <ListItemButton sx={styleSubItem} component="a" href="https://demo.fuky.synology.me" target="_blank">
+                <ListItemIcon sx={itemIconSx}><Globe {...subIconStyle} /></ListItemIcon>
                 <ListItemText primary="Live Demo" secondary="demo.fuky.synology.me" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
               </ListItemButton>
 
               <ListItemButton sx={styleSubItem} component="a" href="https://github.com/Sevrard/mybank-angular-dashboard" target="_blank">
-                <ListItemIcon><GitHubIcon sx={{ fontSize: 20, color: 'rgba(255,255,255,0.7)' }} /></ListItemIcon>
-                <ListItemText primary="GitHub Front" />
+                <ListItemIcon sx={itemIconSx}><Github {...subIconStyle} /></ListItemIcon>
+                <ListItemText primary="GitHub Front" secondary="github.com/Sevrard/mybank-angular-dashboard" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
               </ListItemButton>
 
               <ListItemButton sx={styleSubItem} component="a" href="https://github.com/Sevrard/mybank-Spring-boot-API" target="_blank">
-                <ListItemIcon><TerminalIcon sx={{ fontSize: 20, color: 'rgba(255,255,255,0.7)' }} /></ListItemIcon>
-                <ListItemText primary="GitHub Back" />
+                <ListItemIcon sx={itemIconSx}><Github {...subIconStyle} /></ListItemIcon>
+                <ListItemText primary="GitHub Back" secondary="github.com/Sevrard/mybank-Spring-boot-API" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
               </ListItemButton>
             </List>
           </Collapse>
 
           <Box sx={{ my: 2 }} />
 
+          {/* SECTION REACT */}
           <ListItem disablePadding>
             <ListItemButton onClick={() => setOpenReact(!openReact)}>
-              <ListItemIcon><SportsEsportsIcon sx={{ color: '#61dafb' }} /></ListItemIcon>
-              <ListItemText primary="React Project" primaryTypographyProps={{ fontWeight: 600 }} />
-              {openReact ? <ExpandLess /> : <ExpandMore />}
+              <ListItemIcon>
+                <Code2 {...iconStyle} />
+              </ListItemIcon>
+              <ListItemText primary="React DEMO" primaryTypographyProps={{ fontWeight: 600 }} />
+              {openReact ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </ListItemButton>
           </ListItem>
 
           <Collapse in={openReact} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemButton  sx={styleSubItem}  component="a" href="https://game.fuky.synology.me" target="_blank">
-                <ListItemIcon><LanguageIcon sx={{ fontSize: 20, color: 'rgba(255,255,255,0.7)' }} /></ListItemIcon>
+              <ListItemButton sx={styleSubItem} component="a" href="https://github.com/Sevrard/Sevrard-react" target="_blank">
+                <ListItemIcon sx={itemIconSx}><Github {...subIconStyle} /></ListItemIcon>
+                <ListItemText primary="Current site" secondary=" github.com/Sevrard/Sevrard-react" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
+
+                
+              </ListItemButton>
+            </List>
+          </Collapse>
+
+          <Box sx={{ my: 2 }} />
+
+          {/* SECTION PROJET JEUX */}
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => setOpenProject(!openProject)}>
+              <ListItemIcon>
+                <Gamepad2 {...iconStyle} />
+              </ListItemIcon>
+              <ListItemText primary="React Project" primaryTypographyProps={{ fontWeight: 600 }} />
+              {openProject ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+            </ListItemButton>
+          </ListItem>
+
+          <Collapse in={openProject} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={styleSubItem} component="a" href="https://game.fuky.synology.me" target="_blank">
+                <ListItemIcon sx={itemIconSx}><Globe {...subIconStyle} /></ListItemIcon>
                 <ListItemText primary="Mille Sabords" secondary="game.fuky.synology.me" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
               </ListItemButton>
             </List>
@@ -102,9 +136,10 @@ const NavigationDrawer = ({ open, onClose, themeName }: Props) => {
 
         </List>
 
+        {/* FOOTER THEME */}
         <Box sx={{ p: 2, backgroundColor: 'rgba(0,0,0,0.2)' }}>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <PaletteIcon sx={{ fontSize: 16, opacity: 0.6 }} />
+            <Palette size={14} style={{ opacity: 0.6 }} />
             <Typography variant="caption" sx={{ opacity: 0.6, textTransform: 'uppercase' }}>
               Theme: {themeName}
             </Typography>

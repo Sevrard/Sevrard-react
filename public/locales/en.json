@@ -1,4 +1,7 @@
 {
+  "topbar": {
+    "selfHosted": "Self-hosted sur Synology NAS ⚡ React 19 + Vite"
+  },
   "sidebar": {
     "home": "Home",
     "about": "About",
