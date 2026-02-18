@@ -1,0 +1,35 @@
+{
+  "sidebar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "exp": "Expériences",
+    "contact": "Contact"
+  },
+  "cv": {
+    "role": "Développeur Full-Stack",
+    "github_cta": "Voir mon Github",
+    "download_cv": "Télécharger CV",
+    "greeting": "Bonjour.",
+    "intro_title": "Quelques mots de présentation..",
+    "bio_p1": "Je m’appelle Stéphane, développeur logiciel de 34 ans avec près de 10 ans d’expérience dans le développement d’applications web modernes. Je maîtrise des environnements front-end et full-stack, avec une solide expertise sur des technologies telles qu’Angular, React, Vue.js et Node.js.",
+    "bio_p2": "Habitué à travailler en méthodologie Agile / SCRUM et dans des environnements exigeants, je m’adapte rapidement aux équipes et aux infrastructures existantes afin d’être opérationnel et productif dans des délais courts. Récemment installé en Haute-Savoie, je suis aujourd’hui à la recherche d’un CDI dans la région Genève / Annecy, idéalement au sein d’un environnement structuré, orienté qualité, performance et bonnes pratiques de développement."
+  },
+  "resume": {
+    "education_title": "Education",
+    "experience_title": "Experience",
+    "bac": "Bac Scientifique + Licence Informatique",
+    "university": "Université littoral côte d'opale",
+    "fullstack":"Dev full-stack",
+    "companyDev":"Dev informatique d'entreprise",
+    "assoDev":"Chef de projet / President Asso",
+    "webDev":"Developpeur web",
+    "edu_ulco": "Formation en programmation, algorithmique et systèmes informatiques",
+    "exp_kiliba_desc": "Participation au développement d’une solution de marketing automatisé basée sur l’intelligence artificielle et des algorithmes d’apprentissage supervisé.",
+    "exp_freelance_desc": "Accompagnement à la création d’outils SaaS et de solutions e-commerce personnalisées.",
+    "exp_rdv_desc": "Développement d’un ERP complet (exploitation, garage, comptabilité).",
+    "exp_neo_desc": "Création de bornes tactiles muséologique (Grand Nausicaa) intuitives pour enrichir l’expérience des visiteurs, incluant développement logiciel et installation du matériel sur place",
+    "exp_innova_desc": "Gestion de projets de développement d’ERP sur mesure, conception de sites e-commerce et vitrines, mise en place d’automatisations comptables et outils connectés",
+    "exp_mapo_desc": "Création d’interfaces web sur mesure, intégration de maquettes, optimisation UX/UI et de notre plateforme web"
+
+  }
+}

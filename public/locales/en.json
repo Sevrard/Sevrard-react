@@ -1,0 +1,34 @@
+{
+  "sidebar": {
+    "home": "Home",
+    "about": "About",
+    "exp": "Experience",
+    "contact": "Contact"
+  },
+  "cv": {
+    "role": "Full-Stack Developer",
+    "github_cta": "View my GitHub",
+    "download_cv": "Download CV",
+    "greeting": "Hello.",
+    "intro_title": "A few words about me...",
+    "bio_p1": "My name is Stéphane, a 34-year-old software developer with nearly 10 years of experience in building modern web applications. I am proficient in both front-end and full-stack environments, with solid expertise in technologies such as Angular, React, Vue.js, and Node.js.",
+    "bio_p2": "Used to working with Agile / SCRUM methodologies in demanding environments, I quickly adapt to existing teams and infrastructures to remain operational and productive within short timeframes. Recently settled in Haute-Savoie, I am currently looking for a permanent position (CDI) in the Geneva / Annecy region, ideally within a structured environment focused on quality, performance, and development best practices."
+  },
+  "resume": {
+    "education_title": "Education",
+    "experience_title": "Experience",
+    "bac": "Scientific Baccalaureate + Bachelor in Computer Science",
+    "university": "University of the Littoral Opal Coast",
+    "fullstack": "Full-stack Developer",
+    "companyDev": "Enterprise Software Developer",
+    "assoDev": "Project Manager / Association President",
+    "webDev": "Web Developer",
+    "edu_ulco": "Training in programming, algorithms, and computer systems",
+    "exp_kiliba_desc": "Participated in the development of an automated marketing solution based on artificial intelligence and supervised learning algorithms.",
+    "exp_freelance_desc": "Assisted in the creation of SaaS tools and customized e-commerce solutions.",
+    "exp_rdv_desc": "Developed a comprehensive ERP system (operations, garage management, accounting).",
+    "exp_neo_desc": "Created intuitive museum touch terminals (Grand Nausicaa) to enhance visitor experience, including software development and on-site hardware installation.",
+    "exp_innova_desc": "Managed custom ERP development projects, designed e-commerce and showcase websites, and implemented accounting automations and connected tools.",
+    "exp_mapo_desc": "Created custom web interfaces, integrated UI/UX mockups, and optimized the web platform."
+  }
+}
