@@ -19,15 +19,16 @@ interface Props {
 }
 
 const NavigationDrawer = ({ open, onClose, themeName }: Props) => {
-  const [openAngular, setOpenAngular] = useState(true);
-  const [openReact, setOpenReact] = useState(true);
-  const [openProject, setOpenProject] = useState(true);
+  const [openPortfolio, setOpenPortfolio] = useState(true);
+  const [openGithub, setOpenGithub] = useState(true);
 
   // Style commun pour les icônes Lucide avec la couleur accent
   const iconStyle = { size: 25, color: 'var(--mat-primary)' };
   const subIconStyle = { size: 19, color: 'var(--mat-accent)' };
   const styleSubItem = { pl: 4, minWidth: 15, '&:hover': { backgroundColor: 'rgba(255,255,255,0.05)' } };
   const itemIconSx = { minWidth: '35px', display: 'flex', alignItems: 'center' };
+  const subItemPrimaryProps = { fontSize: '0.8rem', fontWeight: 600 };
+  const subItemSecondaryProps = { fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' };
 
   return (
     <Drawer
@@ -58,78 +59,62 @@ const NavigationDrawer = ({ open, onClose, themeName }: Props) => {
 
         <List sx={{ flexGrow: 1, pt: 2 }}>
 
-          {/* SECTION ANGULAR */}
+          {/* SECTION PORTFOLIO */}
           <ListItem disablePadding>
-            <ListItemButton onClick={() => setOpenAngular(!openAngular)}>
+            <ListItemButton onClick={() => setOpenPortfolio(!openPortfolio)}>
               <ListItemIcon>
-                <Code2 {...iconStyle} />
+                <Globe {...iconStyle} />
               </ListItemIcon>
-              <ListItemText primary="Angular DEMO" primaryTypographyProps={{ fontWeight: 600 }} />
-              {openAngular ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+              <ListItemText primary="Portfolio" primaryTypographyProps={{ fontWeight: 600 }} />
+              {openPortfolio ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
             </ListItemButton>
           </ListItem>
 
-          <Collapse in={openAngular} timeout="auto" unmountOnExit>
+          <Collapse in={openPortfolio} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
               <ListItemButton sx={styleSubItem} component="a" href="https://demo.fuky.synology.me" target="_blank">
-                <ListItemIcon sx={itemIconSx}><Globe {...subIconStyle} /></ListItemIcon>
-                <ListItemText primary="Live Demo" secondary="demo.fuky.synology.me" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
+                <ListItemIcon sx={itemIconSx}><Code2 {...subIconStyle} /></ListItemIcon>
+                <ListItemText primary="Mybank Demo (Angular)" secondary="demo.fuky.synology.me" primaryTypographyProps={subItemPrimaryProps} secondaryTypographyProps={subItemSecondaryProps} />
               </ListItemButton>
+              <ListItemButton sx={styleSubItem} component="a" href="https://game.fuky.synology.me" target="_blank">
+                <ListItemIcon sx={itemIconSx}><Gamepad2 {...subIconStyle} /></ListItemIcon>
+                <ListItemText primary="Game Demo (React)" secondary="game.fuky.synology.me" primaryTypographyProps={subItemPrimaryProps} secondaryTypographyProps={subItemSecondaryProps} />
+              </ListItemButton>
+              <ListItemButton sx={styleSubItem} component="a" href="https://libero.fuky.synology.me" target="_blank">
+                <ListItemIcon sx={itemIconSx}><Code2 {...subIconStyle} /></ListItemIcon>
+                <ListItemText primary="Libero (Angular)" secondary="libero.fuky.synology.me" primaryTypographyProps={subItemPrimaryProps} secondaryTypographyProps={subItemSecondaryProps} />
+              </ListItemButton>
+            </List>
+          </Collapse>
 
+          <Box sx={{ my: 2 }} />
+
+          {/* SECTION GITHUB REPOS */}
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => setOpenGithub(!openGithub)}>
+              <ListItemIcon>
+                <Github {...iconStyle} />
+              </ListItemIcon>
+              <ListItemText primary="GitHub repos" primaryTypographyProps={{ fontWeight: 600 }} />
+              {openGithub ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+            </ListItemButton>
+          </ListItem>
+
+          <Collapse in={openGithub} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
               <ListItemButton sx={styleSubItem} component="a" href="https://github.com/Sevrard/mybank-angular-dashboard" target="_blank">
                 <ListItemIcon sx={itemIconSx}><Github {...subIconStyle} /></ListItemIcon>
-                <ListItemText primary="GitHub Front" secondary="github.com/Sevrard/mybank-angular-dashboard" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
+                <ListItemText primary="Mybank-frontend (Angular)" secondary="github.com/Sevrard/mybank-angular-dashboard" primaryTypographyProps={subItemPrimaryProps} secondaryTypographyProps={subItemSecondaryProps} />
               </ListItemButton>
 
               <ListItemButton sx={styleSubItem} component="a" href="https://github.com/Sevrard/mybank-Spring-boot-API" target="_blank">
                 <ListItemIcon sx={itemIconSx}><Github {...subIconStyle} /></ListItemIcon>
-                <ListItemText primary="GitHub Back" secondary="github.com/Sevrard/mybank-Spring-boot-API" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
+                <ListItemText primary="Mybank-backend (Springboot)" secondary="github.com/Sevrard/mybank-Spring-boot-API" primaryTypographyProps={subItemPrimaryProps} secondaryTypographyProps={subItemSecondaryProps} />
               </ListItemButton>
-            </List>
-          </Collapse>
 
-          <Box sx={{ my: 2 }} />
-
-          {/* SECTION REACT */}
-          <ListItem disablePadding>
-            <ListItemButton onClick={() => setOpenReact(!openReact)}>
-              <ListItemIcon>
-                <Code2 {...iconStyle} />
-              </ListItemIcon>
-              <ListItemText primary="React DEMO" primaryTypographyProps={{ fontWeight: 600 }} />
-              {openReact ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </ListItemButton>
-          </ListItem>
-
-          <Collapse in={openReact} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
               <ListItemButton sx={styleSubItem} component="a" href="https://github.com/Sevrard/Sevrard-react" target="_blank">
                 <ListItemIcon sx={itemIconSx}><Github {...subIconStyle} /></ListItemIcon>
-                <ListItemText primary="Current site" secondary=" github.com/Sevrard/Sevrard-react" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
-
-                
-              </ListItemButton>
-            </List>
-          </Collapse>
-
-          <Box sx={{ my: 2 }} />
-
-          {/* SECTION PROJET JEUX */}
-          <ListItem disablePadding>
-            <ListItemButton onClick={() => setOpenProject(!openProject)}>
-              <ListItemIcon>
-                <Gamepad2 {...iconStyle} />
-              </ListItemIcon>
-              <ListItemText primary="React Project" primaryTypographyProps={{ fontWeight: 600 }} />
-              {openProject ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-            </ListItemButton>
-          </ListItem>
-
-          <Collapse in={openProject} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
-              <ListItemButton sx={styleSubItem} component="a" href="https://game.fuky.synology.me" target="_blank">
-                <ListItemIcon sx={itemIconSx}><Globe {...subIconStyle} /></ListItemIcon>
-                <ListItemText primary="Mille Sabords" secondary="game.fuky.synology.me" secondaryTypographyProps={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)' }} />
+                <ListItemText primary="Sevrard (current site)" secondary="github.com/Sevrard/Sevrard-react" primaryTypographyProps={subItemPrimaryProps} secondaryTypographyProps={subItemSecondaryProps} />
               </ListItemButton>
             </List>
           </Collapse>

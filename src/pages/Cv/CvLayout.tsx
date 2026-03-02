@@ -83,6 +83,9 @@ export default function CvLayout() {
 
                         <Button 
                             variant="outlined" 
+                            component="a"
+                            href="/cv.pdf"
+                            download="CV_Stephane_Evrard.pdf"
                             startIcon={<DownloadIcon />}
                             sx={{ color: 'white', borderColor: 'white', borderRadius: '20px', px: 4 }}
                         >

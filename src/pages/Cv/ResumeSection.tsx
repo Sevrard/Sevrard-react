@@ -188,14 +188,15 @@ const ResumeSection = () => {
                     </Typography>
                     <SkillBar label="Node.js" value={70} />
                     <SkillBar label="Springboot(Java)" value={80} />
-                    <SkillBar label="Python" value={100} />
+                    <SkillBar label="Python" value={50} />
 
                     <Typography variant="h5" sx={{ mt: 5, mb: 3, fontWeight: 'bold' }}>
                         Dev <span style={{ color: 'var(--primary-color)' }}>Skills</span>
                     </Typography>
                     <SkillBar label="Docker/Github" value={80} />
                     <SkillBar label="Postgre/mongoDb" value={90} />
-                    <SkillBar label="AWS (Sqs,s3,lambda,couldwatch)" value={60} />
+                    <SkillBar label="AWS (Sqs,S3,Lambda..)" value={60} />
+                    <SkillBar label="Llm (cursor+gemini)" value={80} />
 
                     {/* --- KNOWLEDGES --- */}
                     <Typography variant="h5" sx={{ mt: 5, mb: 3, fontWeight: 'bold' }}>

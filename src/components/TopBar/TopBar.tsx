@@ -53,8 +53,17 @@ const TopBar = ({ onChangeBg }: TopBarProps) => {
             <IconButton onClick={() => setDrawerOpen(true)} sx={{ color: 'white' }}>
               <MenuIcon />
             </IconButton>
-            <Typography sx={{ fontSize:'15px' , alignSelf:'center', color:'#67696b' }}>
-                {t('topbar.selfHosted')}
+            <Typography
+              sx={{
+                fontSize: { xs: 'clamp(0.65rem, 2.5vw, 0.85rem)', sm: '0.8rem', md: '15px' },
+                alignSelf: 'center',
+                color: '#67696b',
+                lineHeight: 1.3,
+                flexShrink: 1,
+                minWidth: 0,
+              }}
+            >
+              {t('topbar.selfHosted')}
             </Typography>
           </Box>
 

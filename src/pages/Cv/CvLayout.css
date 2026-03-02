@@ -124,11 +124,13 @@
 
 .script-font {
     font-family: 'Kaushan Script', cursive;
-    font-size: 5rem;
+    font-size: clamp(2rem, 8vw, 5rem);
     line-height: 1;
     margin-bottom: 1rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    max-width: 100%;
+    word-break: break-word;
 }
 
 .bio-section{
@@ -156,11 +158,13 @@
         display: none;
     }
     .script-font {
-        font-size: 3.5rem;
+        font-size: clamp(1.75rem, 9vw, 3.5rem);
         text-align: center;
     }
     .bio-section {
-        text-align: center; 
+        text-align: center;
+        width: 90%;
+        max-width: 100%;
     }
     .bio-text {
         text-align: center;
