@@ -13,7 +13,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 import BioSection from './BioSection'; 
 import ResumeSection from './ResumeSection';
-import ProfilePic from '../../assets/p2.jpeg'; 
+import ProfilePic from '../../assets/p2.webp'; 
 import './CvLayout.css';
 
 const NAV_ITEMS = [

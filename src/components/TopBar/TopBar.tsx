@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AppBar, Toolbar, Box, ToggleButton, ToggleButtonGroup, IconButton, Menu, MenuItem, Typography, Radio, Stack } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WallpaperIcon from '@mui/icons-material/Wallpaper';

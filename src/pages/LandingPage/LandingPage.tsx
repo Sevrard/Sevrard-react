@@ -5,11 +5,11 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 import Waves from '../../components/shared/waves/waves';
 import TopBar from '../../components/TopBar/TopBar';
-import CvLayout from '../Cv/Cvlayout';
+import CvLayout from '../Cv/CvLayout';
 
-import Hole from '../../assets/HoleRed.png';
-import MountainImg from '../../assets/Mountain.png';
-import MountainImg2 from '../../assets/mountain2.png';
+import Hole from '../../assets/HoleRed.webp';
+import MountainImg from '../../assets/Mountain.webp';
+import MountainImg2 from '../../assets/mountain2.webp';
 
 import './LandingPage.css';
 
