@@ -66,6 +66,10 @@
     align-items: center;
 }
 
+.cv-grid.cv-grid-full {
+    grid-template-columns: 1fr;
+}
+
 .profile-section {
     display: flex;
     flex-direction: column;

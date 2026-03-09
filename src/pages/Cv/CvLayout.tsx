@@ -5,19 +5,22 @@ import { Typography, Button, IconButton, Box } from '@mui/material';
 
 import HomeIcon from '@mui/icons-material/Home';
 import SchoolIcon from '@mui/icons-material/School';
+import UserIcon from '@mui/icons-material/Person';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import DownloadIcon from '@mui/icons-material/Download';
 
-import BioSection from './BioSection'; 
+import BioSection from './BioSection';
 import ResumeSection from './ResumeSection';
+import ExpSection from './ExpSection';
 import ProfilePic from '../../assets/p2.webp'; 
 import './CvLayout.css';
 
 const NAV_ITEMS = [
-  { id: 'exp', icon: <SchoolIcon />, labelKey: 'sidebar.exp' },
+    { id: 'resume', icon: <UserIcon />, labelKey: 'sidebar.resume' },
+    { id: 'exp', icon: <SchoolIcon />, labelKey: 'sidebar.exp' },
 ];
 
 export default function CvLayout() {
@@ -51,8 +54,9 @@ export default function CvLayout() {
             </nav>
 
             <div className="cv-content">
-                <div className="cv-grid">
+                <div className={`cv-grid ${activeSection === 'exp' ? 'cv-grid-full' : ''}`}>
                     
+                    {activeSection !== 'exp' && (
                     <div className="profile-section">
                         <div className="dotted-pattern" />
                         <div className="profile-avatar-container">
@@ -92,10 +96,12 @@ export default function CvLayout() {
                             {t('cv.download_cv', 'Download CV')}
                         </Button>
                     </div>
+                    )}
 
                     <div className="dynamic-content">
                         {activeSection === 'about' && <BioSection />}
-                        {activeSection === 'exp' &&  <ResumeSection />}
+                        {activeSection === 'resume' && <ResumeSection />}
+                        {activeSection === 'exp' && <ExpSection />}
                     </div>
 
                 </div>

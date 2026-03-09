@@ -1,6 +1,6 @@
 {
   "topbar": {
-    "selfHosted": "Self-hosted sur Synology NAS ⚡ React 19 + Vite"
+    "selfHosted": "Self-hosted on Synology NAS ⚡ React 19 + Vite"
   },
   "sidebar": {
     "home": "Home",
@@ -27,11 +27,77 @@
     "assoDev": "Project Manager / Association President",
     "webDev": "Web Developer",
     "edu_ulco": "Training in programming, algorithms, and computer systems",
-    "exp_kiliba_desc": "Participated in the development of an automated marketing solution based on artificial intelligence and supervised learning algorithms.",
-    "exp_freelance_desc": "Assisted in the creation of SaaS tools and customized e-commerce solutions.",
-    "exp_rdv_desc": "Developed a comprehensive ERP system (operations, garage management, accounting).",
-    "exp_neo_desc": "Created intuitive museum touch terminals (Grand Nausicaa) to enhance visitor experience, including software development and on-site hardware installation.",
-    "exp_innova_desc": "Managed custom ERP development projects, designed e-commerce and showcase websites, and implemented accounting automations and connected tools.",
-    "exp_mapo_desc": "Created custom web interfaces, integrated UI/UX mockups, and optimized the web platform."
+
+    "exp_kiliba_desc": "Contribution to the development of an AI-powered Marketing Automation platform using supervised learning.",
+    "exp_kiliba_skill_1": "Full UX/UI overhaul: accessibility and responsive optimization for a modern SaaS interface.",
+    "exp_kiliba_skill_2": "Bidirectional integration with Salesforce: automation of customer lifecycle management (Lead/Account/Contact).",
+    "exp_kiliba_skill_3": "Integration of E-commerce ecosystems (Shopify, Prestashop) for marketing lever automation (promo codes, abandoned carts).",
+    "exp_kiliba_skill_4": "Implementation of testing strategies (Jest, Cypress) and real-time monitoring with Datadog.",
+    "exp_kiliba_skill_5": "Agile development cycle (SCRUM): daily standups, ticketing, code reviews, PRs.",
+    "exp_kiliba_skill_6": "Implementation and securing of payment flows via the Stripe API.",
+
+    "exp_freelance_desc": "End-to-end technical support: from infrastructure consulting to development of custom SaaS and E-commerce solutions.",
+    "exp_freelance_skill_1": "Development of SaaS platforms and showcase websites.",
+    "exp_freelance_skill_2": "E-commerce data flow synchronization: interfacing SaaS tools with Prestashop (Inventory, Catalogs, Customers).",
+    "exp_freelance_skill_3": "Consulting and integration of business tools (ERP/CRM Dolibarr) to optimize client internal processes.",
+    "exp_freelance_skill_4": "Setup of professional cloud infrastructures (domain management, mail servers, etc.).",
+
+    "exp_rdv_desc": "Development of a complete ERP (operations, garage, accounting).",
+    "exp_rdv_skill_1": "Development of a workshop management module (repair order workflows, inventory management and billing cycle).",
+    "exp_rdv_skill_2": "Architecture of a standalone secure parking management app (dynamic pricing algorithms and payment gateways).",
+    "exp_rdv_skill_3": "Automation of the parking tunnel via computer vision: license plate recognition, real-time data orchestration and automated billing.",
+    "exp_rdv_skill_4": "Translation of complex business processes into smooth user journeys and high-fidelity interfaces.",
+    "exp_rdv_skill_5": "Design of a hybrid API architecture (Strapi/GraphQL) to ensure data interoperability between the different ERP modules.",
+
+    "exp_neo_desc": "Creation of museum touch terminals (Grand Nausicaa)",
+    "exp_neo_skill_1": "End-to-end management of 7 thematic interactive terminals (Cetaceans, Open Sea...), from mockup integration to inauguration",
+    "exp_neo_skill_2": "Creation of mini-games (Memory), interactive quizzes and educational paths optimized for family and school audiences",
+    "exp_neo_skill_3": "Development of React applications packaged as optimized executables for a dedicated Chromium environment (Kiosk mode)",
+    "exp_neo_skill_4": "Direct collaboration with the Production Manager and critical acceptance phases with the establishment management (Nausicaá)",
+    "exp_neo_skill_5": "On-site technical installation, hardware configuration and software maintenance of devices in real-world conditions.",
+
+    "exp_innova_desc": "President of Esport-France & Founder of Innova-Web: Creation of a digital ecosystem dedicated to regional amateur competition.",
+    "exp_innova_skill_1": "Design of an event SaaS platform: architecture of an automated league and tournament management system.",
+    "exp_innova_skill_2": "User journey engineering (UX): optimization of registration and competition tracking.",
+    "exp_innova_skill_3": "Fullstack development of innovative web solutions: creation of real-time scoring tools and statistical dashboards.",
+    "exp_innova_skill_4": "Project management and networking: organization of physical and digital events in collaboration with regional partners.",
+    "exp_innova_skill_5": "Riot/Steam/Valve API synchronization for real-time scoring and player data retrieval.",
+
+    "exp_mapo_desc": "Creation of custom web interfaces, mockup integration, UX/UI optimization and web platform enhancement",
+
+    "profil_type": "PROFILE",
+    "profil_poste": "Full-Stack Developer",
+    "disponibilite": "Availability",
+    "disponibilite_value": "immediate",
+    "resume_profil_title": "Profile summary",
+    "summary_1": "Senior Full-stack developer (8 years of experience), expert in the Angular/React and Node.js ecosystem.",
+    "summary_2": "My background, from an AI startup (Kiliba) to industrial ERP design, has built both technical and business expertise.",
+    "summary_3": "Specialized in translating complex business needs into scalable, secure software solutions.",
+    "summary_4": "Strong delivery culture: I focus on building robust interfaces, centered on user experience and high availability.",
+    "env_technique_title": "Technical environment",
+    "points_forts_title": "Key strengths",
+    "points_forts_1": "Advanced Angular mastery: Reactive architecture (Signals), Standalone components and optimization (@defer).",
+    "points_forts_2": "Flow & Payment engineering: Design of secure checkout tunnels and billing process automation (Stripe).",
+    "points_forts_3": "Scalable API design: Development of robust back-ends (Node.js) and real-time data orchestration (e.g. LAPI).",
+    "points_forts_4": "Augmented development (AI): Advanced use of LLM tools (Cursor, Claude) to speed up production and edge case coverage.",
+    "points_forts_5": "Agile collaboration: Used to high technical requirement environments, in close collaboration with PO/UX and QA teams.",
+    "env_cle_title": "Key technical environment",
+    "env_frontend": "Front-end",
+    "env_frontend_value": "Angular v21, React v19",
+    "env_backend": "Back-end",
+    "env_backend_value": "Node.js, Express, NestJS",
+    "env_qualite": "Quality / Testing",
+    "env_qualite_value": "Jasmine, Karma, Cypress, Jest",
+    "env_devops": "DevOps / Cloud",
+    "env_devops_value": "GitLab CI, GitHub Actions, AWS",
+    "env_methodo": "Methodology",
+    "env_methodo_value": "Agile (Scrum), TDD, Clean Architecture",
+    "env_projets": "Project management",
+    "env_projets_value": "Jira, Confluence",
+    "hobby_title": "Hobby",
+    "hobby_1": "3D Printing",
+    "hobby_2": "Mountain biking",
+    "hobby_3": "Hiking",
+    "hobby_4": "Airsoft"
   }
 }
