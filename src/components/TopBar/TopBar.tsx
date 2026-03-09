@@ -43,8 +43,10 @@ const TopBar = ({ onChangeBg }: TopBarProps) => {
         position="fixed"
         elevation={0}
         sx={{
-          background: 'rgba(0,0,0,0)',
-          backdropFilter: 'blur(10px)',
+          background: 'rgba(15, 25, 35, 0.20)',
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden',
+          zIndex: 1100,
         }}
       >
         <Toolbar sx={{ justifyContent: 'space-between' }}>
